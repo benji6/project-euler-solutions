@@ -1,3 +1,3 @@
 # project-euler-solutions
 
-Playing with some Haskell and the problems here [https://projecteuler.net/](https://projecteuler.net/)
+Playing with the problems here [https://projecteuler.net/](https://projecteuler.net/) in Haskell and JavaScript.
