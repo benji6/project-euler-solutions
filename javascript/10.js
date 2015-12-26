@@ -11,5 +11,4 @@ const primes = function * () {
 }
 let sum = 0
 for (const x of primes()) if (x >= 2000000) break; else sum += x
-
 console.log(sum)

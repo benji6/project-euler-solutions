@@ -6,7 +6,6 @@ const pythagoreanTriplets = function * () {
     }
   }
 }
-
 for (const x of pythagoreanTriplets()) {
   if (x.reduce((a, b) => a + b) === 1000) {
     console.log(x.reduce((a, b) => a * b))

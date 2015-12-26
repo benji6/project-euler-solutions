@@ -9,5 +9,4 @@ const primes = function * () {
     x++
   }
 }
-
 console.log([...primes()].pop())

@@ -1,7 +1,5 @@
 import Data.List (maximum, tails, transpose)
-
 main = putStrLn . show $ maximum $ map product $ concat $ allLines grid
-
 allLines grid = map ($ grid) [horizontalLines, verticalLines, leftRightDiagonals, rightLeftDiagonals]
 horizontalLines = lineToLinesOfFixedLength
 verticalLines = horizontalLines . transpose
@@ -9,7 +7,6 @@ leftRightDiagonals = lineToLinesOfFixedLength . diagonals
 rightLeftDiagonals = lineToLinesOfFixedLength . diagonals . transpose
 lineToLinesOfFixedLength = filter ((== lineLength) . length) . map (take lineLength) . concat . map tails
 lineLength = 4
-
 grid =
   [
     [08,02,22,97,38,15,00,40,00,75,04,05,07,78,52,12,50,77,91,08],
@@ -33,7 +30,6 @@ grid =
     [20,73,35,29,78,31,90,01,74,31,49,71,48,86,81,16,23,57,05,54],
     [01,70,54,71,83,51,54,69,16,92,33,48,61,43,52,01,89,19,67,48]
   ]
-
 diagonals = tail . go [] where
   go b es_ = [h | h:_ <- b] : case es_ of
       []   -> transpose ts
