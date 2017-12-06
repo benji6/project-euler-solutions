@@ -1,11 +1,7 @@
 fn main() {
-  let mut n = 0;
-
-  for num in 1..1000 {
-    if num % 3 == 0 || num % 5 == 0 {
-      n += num;
-    }
-  }
+  let n: u32 = (1..1000)
+    .filter(|n| n % 3 == 0 || n % 5 == 0)
+    .sum();
 
   println!("{}", n);
 }
