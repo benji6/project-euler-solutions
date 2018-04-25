@@ -5,6 +5,6 @@ const fibonacciGenerator = function * () {
 let sumEvenFibs = 0
 for (const x of fibonacciGenerator()) {
   if (x > 4000000) break
-  if (x % 2 !== 0) sumEvenFibs += x
+  if (x % 2 === 0) sumEvenFibs += x
 }
 console.log(sumEvenFibs)
